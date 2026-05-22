@@ -338,36 +338,24 @@ header a {
   display: flex;
   justify-content: center;
   align-items: center;
-
   overflow: hidden;
 }
 
-/* 背景画像 */
-.auth-bg {
+.auth-bg-img {
   position: absolute;
   inset: 0;
-
-  background-image:
-    linear-gradient(
-      rgba(0,0,0,0.35),
-      rgba(0,0,0,0.55)
-    ),
-    url("/assets/waterfall_bg2.png");
-
-  background-size: cover;
-  background-position: center;
-
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -20;
 }
 
-/* ぼかし */
-.auth-bg::after {
-  content: "";
+.auth-bg-filter {
   position: absolute;
   inset: 0;
-
+  background: rgba(0,0,0,0.45);
   backdrop-filter: blur(8px);
-  background: rgba(0,0,0,0.15);
+  z-index: -10;
 }
 
 .main{
